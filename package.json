@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.ts"
+    "wdio": "wdio run ./wdio.conf.ts",
+    "report": "npx allure generate allure-results --clean -o allure-results/allure-report",
+    "serve": "npx allure serve allure-results --clean"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/nodemailer": "^6.4.9",
+    "@wdio/allure-reporter": "^8.14.0",
     "@wdio/cli": "^8.14.2",
     "@wdio/cucumber-framework": "^8.14.0",
     "@wdio/local-runner": "^8.14.2",
